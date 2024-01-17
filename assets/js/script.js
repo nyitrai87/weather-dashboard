@@ -24,7 +24,21 @@ searchBtn.on('click', function (e) {
                     return response.json();
                 })
                 .then(function (data) {
-                    console.log(data)
+                    const currentWeather = $('#today').removeClass('borderless').addClass('bordered');
+                    const date = dayjs().format('D/M/YYYY');
+                    const locationData = data.name;
+                    const iconUrl = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+                    const tempData = data.main.temp;
+                    const windData = data.wind.speed;
+                    const humidityData = data.main.humidity;
+
+                    const locationAndDateEl = $('<h2>').attr('id', 'location-date').text(locationData + ' (' + date + ')');
+                    const weatherIcon = $('<img>').attr('src', iconUrl).attr('id', 'current-icon');
+                    locationAndDateEl.append(weatherIcon);
+                    const tempEl = $('<p>').text(`Temp: ${tempData} °C`);
+                    const windEl = $('<p>').text(`Wind: ${windData} KPH`);
+                    const humidityEl = $('<p>').text(`Humidity: ${humidityData}%`);
+                    currentWeather.append(locationAndDateEl, tempEl, windEl, humidityEl);
                 })
         })
 })
