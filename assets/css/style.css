@@ -31,6 +31,10 @@ h2 {
     margin-left: 10px;
 }
 
+.capital {
+    text-transform: capitalize;
+}
+
 .hidden {
     display: none;
 }
@@ -55,6 +59,10 @@ h2 {
     margin-top: 16px;
 }
 
+.history-button {
+    background-color: #AEAEAE;
+}
+
 .bordered {
     border: solid 1px #000;
     padding-top: 5px;
@@ -75,5 +83,9 @@ h2 {
 .forecast-date {
     font-weight: bold;
     font-size: 18px;
+    margin-bottom: 0;
+}
+
+.weather-hr {
     margin-bottom: 0;
 }
