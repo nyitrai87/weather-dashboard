@@ -12,7 +12,7 @@ This application uses three APIs from OpenWeatherMap:
 Type any city name into the search field on the left hand side and click the search button. If a location has already been searched, a button will appear under the search button with the city name for quick access.
 
 ## Screenshots
-![Landing page](.assets/images/landing-page.png)
+![Landing page](./assets/images/landing-page.png)
 
 ![Weather data of a city](./assets/images/weather-data.png)
 
